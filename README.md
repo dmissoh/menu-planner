@@ -1,4 +1,4 @@
 # menu-planner
-A menu planner based on the OptoPlanner Framework
+A menu planner based on the OptaPlanner Framework
 
 
