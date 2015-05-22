@@ -19,12 +19,16 @@ public class MenuBalancingEasyScoreCalculator implements EasyScoreCalculator<Men
 	  int sugarUsage = 0;
 	  int proteinUsage = 0;
 
+	  int numberOfRecipesInAMenu = 0;
+
 	  // Calculate usage
 	  for (Recipe recipe : menuBalance.getRecipesList()) {
 		if (menu.equals(recipe.getMenu())) {
 		  fatUsage += recipe.getFat();
 		  sugarUsage += recipe.getSugar();
 		  proteinUsage += recipe.getProtein();
+
+		  numberOfRecipesInAMenu ++;
 		}
 	  }
 
@@ -42,8 +46,8 @@ public class MenuBalancingEasyScoreCalculator implements EasyScoreCalculator<Men
 		hardScore += menuProteinAvailable;
 	  }
 
-	  if(menu.getId() == 2){
-		//hardScore = -1000;
+	  if(numberOfRecipesInAMenu > 6){
+		hardScore += -100000;
 	  }
 
 	}
