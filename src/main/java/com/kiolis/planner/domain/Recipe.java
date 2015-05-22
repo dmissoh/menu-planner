@@ -19,7 +19,8 @@ public class Recipe extends AbstractPersistable {
   // Planning variables: changes during planning, between score calculations.
   private Menu menu;
 
-  @PlanningVariable(valueRangeProviderRefs = {"menuRange"}, strengthComparatorClass = MenuStrengthComparator.class)
+  @PlanningVariable(valueRangeProviderRefs = {"menuRange"},
+          strengthComparatorClass = MenuStrengthComparator.class, nullable = true)
   public Menu getMenu() {
 	return menu;
   }

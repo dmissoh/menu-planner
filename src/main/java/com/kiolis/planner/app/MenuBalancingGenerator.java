@@ -11,7 +11,7 @@ import java.util.List;
  * Created by kiolis on 20/05/15.
  */
 public class MenuBalancingGenerator {
-  public MenuBalance createMenuBalance(int i, int i1) {
+  public MenuBalance createMenuBalance() {
 	MenuBalance menuBalance = new MenuBalance();
 	List<Recipe> recipesList = new ArrayList<Recipe>();
 
@@ -24,16 +24,16 @@ public class MenuBalancingGenerator {
 
 	recipe = new Recipe();
 	recipe.setId(2L);
-	recipe.setFat(2);
 	recipe.setProtein(10);
+	recipe.setFat(2);
 	recipe.setSugar(4);
 	recipesList.add(recipe);
 
 	recipe = new Recipe();
 	recipe.setId(3L);
-	recipe.setFat(0);
 	recipe.setProtein(1);
-	recipe.setSugar(8);
+	recipe.setFat(1);
+	recipe.setSugar(3);
 	recipesList.add(recipe);
 
 	menuBalance.setRecipeList(recipesList);
@@ -41,18 +41,26 @@ public class MenuBalancingGenerator {
 	List<Menu> menuList = new ArrayList<Menu>();
 
 	Menu menu = new Menu();
-	menu.setId(4L);
+	menu.setId(1L);
 	menu.setProtein(1);
 	menu.setFat(1);
 	menu.setSugar(1);
 	menuList.add(menu);
 
 	menu = new Menu();
-	menu.setId(5L);
+	menu.setId(2L);
 	menu.setProtein(2);
 	menu.setFat(3);
-	menu.setSugar(6);
+	menu.setSugar(16);
 	menuList.add(menu);
+
+	menu = new Menu();
+	menu.setId(3L);
+	menu.setProtein(20);
+	menu.setFat(20);
+	menu.setSugar(30);
+	menuList.add(menu);
+
 
 	menuBalance.setMenuList(menuList);
 

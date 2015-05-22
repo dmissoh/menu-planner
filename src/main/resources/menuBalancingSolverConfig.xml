@@ -15,23 +15,32 @@
 
     <!-- Optimization algorithms configuration -->
     <termination>
-        <secondsSpentLimit>3</secondsSpentLimit>
+        <secondsSpentLimit>5</secondsSpentLimit>
     </termination>
+
     <constructionHeuristic>
         <constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
     </constructionHeuristic>
+
     <localSearch>
         <unionMoveSelector>
-            <changeMoveSelector/>
-            <swapMoveSelector/>
-            <pillarChangeMoveSelector/>
-            <pillarSwapMoveSelector/>
+            <changeMoveSelector>
+                <filterClass>com.kiolis.planner.solver.score.DifferentMealTypeChangeMoveFilter</filterClass>
+            </changeMoveSelector>
+
+            <!--
+            <swapMoveSelector>
+                <filterClass>com.kiolis.planner.solver.score.DifferentMealTypeSwapMoveFilter</filterClass>
+            </swapMoveSelector>
+            -->
+
         </unionMoveSelector>
         <acceptor>
             <entityTabuSize>7</entityTabuSize>
         </acceptor>
         <forager>
-            <acceptedCountLimit>10</acceptedCountLimit>
+            <acceptedCountLimit>1000</acceptedCountLimit>
         </forager>
     </localSearch>
+
 </solver>

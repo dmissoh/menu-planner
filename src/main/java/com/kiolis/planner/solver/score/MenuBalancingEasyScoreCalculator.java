@@ -33,14 +33,19 @@ public class MenuBalancingEasyScoreCalculator implements EasyScoreCalculator<Men
 	  if (menuFatAvailable < 0) {
 		hardScore += menuFatAvailable;
 	  }
-	  int sugarAvailable = menu.getSugar() - sugarUsage;
-	  if (sugarAvailable < 0) {
-		hardScore += sugarAvailable;
+	  int menuSugarAvailable = menu.getSugar() - sugarUsage;
+	  if (menuSugarAvailable < 0) {
+		hardScore += menuSugarAvailable;
 	  }
-	  int proteinAvailable = menu.getProtein() - proteinUsage;
-	  if (proteinAvailable < 0) {
-		hardScore += proteinAvailable;
+	  int menuProteinAvailable = menu.getProtein() - proteinUsage;
+	  if (menuProteinAvailable < 0) {
+		hardScore += menuProteinAvailable;
 	  }
+
+	  if(menu.getId() == 2){
+		//hardScore = -1000;
+	  }
+
 	}
 	return HardSoftScore.valueOf(hardScore, softScore);
   }
