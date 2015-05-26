@@ -6,6 +6,7 @@ import com.kiolis.planner.domain.Recipe;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by kiolis on 20/05/15.
@@ -15,11 +16,24 @@ public class MenuBalancingGenerator {
 	MenuBalance menuBalance = new MenuBalance();
 	List<Recipe> recipesList = new ArrayList<Recipe>();
 
+	/*
+	Random randomGenerator = new Random();
+	for(int i = 0; i < 10000; i++){
+	  Recipe recipe = new Recipe();
+	  recipe.setId((long) i);
+	  recipe.setFat(randomGenerator.nextInt(10));
+	  recipe.setProtein(randomGenerator.nextInt(10));
+	  recipe.setSugar(randomGenerator.nextInt(10));
+	  recipesList.add(recipe);
+	}
+	*/
+
+
 	Recipe recipe = new Recipe();
 	recipe.setId(1L);
 	recipe.setFat(3);
-	recipe.setProtein(5);
-	recipe.setSugar(6);
+	recipe.setProtein(2);
+	recipe.setSugar(1);
 	recipesList.add(recipe);
 
 	recipe = new Recipe();
@@ -45,9 +59,9 @@ public class MenuBalancingGenerator {
 
 	recipe = new Recipe();
 	recipe.setId(5L);
-	recipe.setProtein(0);
+	recipe.setProtein(2);
 	recipe.setFat(1);
-	recipe.setSugar(0);
+	recipe.setSugar(6);
 	recipesList.add(recipe);
 
 	recipe = new Recipe();
@@ -66,9 +80,9 @@ public class MenuBalancingGenerator {
 
 	recipe = new Recipe();
 	recipe.setId(8L);
-	recipe.setProtein(2);
-	recipe.setFat(2);
-	recipe.setSugar(1);
+	recipe.setFat(7);
+	recipe.setProtein(5);
+	recipe.setSugar(2);
 	recipesList.add(recipe);
 
 	recipe = new Recipe();
@@ -80,9 +94,9 @@ public class MenuBalancingGenerator {
 
 	recipe = new Recipe();
 	recipe.setId(10L);
+	recipe.setFat(1);
 	recipe.setProtein(3);
-	recipe.setFat(2);
-	recipe.setSugar(4);
+	recipe.setSugar(5);
 	recipesList.add(recipe);
 
 	menuBalance.setRecipeList(recipesList);
@@ -91,11 +105,12 @@ public class MenuBalancingGenerator {
 
 	Menu menu = new Menu();
 	menu.setId(1L);
-	menu.setProtein(1);
-	menu.setFat(1);
-	menu.setSugar(1);
-	//menuList.add(menu);
+	menu.setFat(11);
+	menu.setProtein(10);
+	menu.setSugar(8);
+	menuList.add(menu);
 
+	/*
 	menu = new Menu();
 	menu.setId(2L);
 	menu.setProtein(50);
@@ -108,7 +123,8 @@ public class MenuBalancingGenerator {
 	menu.setProtein(20);
 	menu.setFat(10);
 	menu.setSugar(2);
-	menuList.add(menu);
+	//menuList.add(menu);
+	*/
 
 
 	menuBalance.setMenuList(menuList);

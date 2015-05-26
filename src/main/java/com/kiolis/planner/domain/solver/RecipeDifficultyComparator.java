@@ -13,7 +13,6 @@ public class RecipeDifficultyComparator implements Comparator<Recipe>, Serializa
   public int compare(Recipe a, Recipe b) {
 	return new CompareToBuilder()
 			.append(a.getRequiredMultiplicand(), b.getRequiredMultiplicand())
-			.append(a.getId(), b.getId())
 			.toComparison();
   }
 }

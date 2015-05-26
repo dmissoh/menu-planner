@@ -46,7 +46,7 @@ public class MenuBalancingEasyScoreCalculator implements EasyScoreCalculator<Men
 		hardScore += menuProteinAvailable;
 	  }
 
-	  if(numberOfRecipesInAMenu > 6){
+	  if(numberOfRecipesInAMenu > 3){
 		hardScore += -100000;
 	  }
 

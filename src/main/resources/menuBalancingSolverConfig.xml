@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solver>
-    <!--<environmentMode>FAST_ASSERT</environmentMode>-->
+    <environmentMode>FULL_ASSERT</environmentMode>
 
     <!-- Domain model configuration -->
     <solutionClass>com.kiolis.planner.domain.MenuBalance</solutionClass>
@@ -15,7 +15,7 @@
 
     <!-- Optimization algorithms configuration -->
     <termination>
-        <secondsSpentLimit>5</secondsSpentLimit>
+        <secondsSpentLimit>10</secondsSpentLimit>
     </termination>
 
     <constructionHeuristic>
@@ -24,16 +24,10 @@
 
     <localSearch>
         <unionMoveSelector>
-            <changeMoveSelector>
-                <filterClass>com.kiolis.planner.solver.score.DifferentMealTypeChangeMoveFilter</filterClass>
-            </changeMoveSelector>
-
-            <!--
-            <swapMoveSelector>
-                <filterClass>com.kiolis.planner.solver.score.DifferentMealTypeSwapMoveFilter</filterClass>
-            </swapMoveSelector>
-            -->
-
+            <changeMoveSelector/>
+            <swapMoveSelector/>
+            <pillarChangeMoveSelector/>
+            <pillarSwapMoveSelector/>
         </unionMoveSelector>
         <acceptor>
             <entityTabuSize>7</entityTabuSize>

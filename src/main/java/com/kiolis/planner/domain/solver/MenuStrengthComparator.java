@@ -13,7 +13,6 @@ public class MenuStrengthComparator implements Comparator<Menu>, Serializable {
   public int compare(Menu a, Menu b) {
 	return new CompareToBuilder()
 			.append(a.getMultiplicand(), b.getMultiplicand())
-			.append(a.getId(), b.getId())
 			.toComparison();
   }
 }

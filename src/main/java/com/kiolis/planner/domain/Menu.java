@@ -13,18 +13,6 @@ public class Menu extends AbstractPersistable {
   private int protein;
   private int sugar;
 
-  public enum MealType {
-    BREAKFAST,
-    LUNCH_STARTER,
-    LUNCH_MAIN_DISH,
-    LUNCH_DESSERT,
-    DINNER_STARTER,
-    DINNER_MAIN_DISH,
-    DINNER_DESSERT
-  }
-
-  private MealType mealType;
-
   public int getFat() {
 	return fat;
   }
